@@ -1,0 +1,136 @@
+#gcloud app deploy index.yaml
+indexes:
+
+- kind: component_version
+  ancestor: no
+  properties:
+  - name: "appli"
+    direction: asc
+  - name: "udt"
+    direction: desc
+
+- kind: component_version
+  ancestor: no
+  properties:
+  - name: "environment"
+    direction: asc
+  - name: "udt"
+    direction: desc
+
+- kind: component_version
+  ancestor: no
+  properties:
+  - name: "server_code"
+    direction: asc  
+  - name: "udt" 
+    direction: desc
+
+- kind: DauSendEmail
+  ancestor: no
+  properties:
+  - name: "yyyymm"
+    direction: asc  
+  - name: "status" 
+    direction: asc
+  - name: "uut" 
+    direction: desc
+
+- kind: MauSendEmail
+  ancestor: no
+  properties:
+  - name: "yyyymm"
+    direction: asc  
+  - name: "status" 
+    direction: asc
+  - name: "uut" 
+    direction: desc
+
+- kind: Message
+  ancestor: no
+  properties:
+  - name: "init_flg"
+    direction: asc  
+  - name: "mtime"
+    direction: asc
+
+- kind: Message
+  ancestor: no
+  properties:
+  - name: "rid"
+  - name: "mtime"
+    direction: desc
+
+- kind: Message
+  ancestor: no
+  properties:
+  - name: "mtype"
+  - name: "mtime"
+    direction: desc
+
+- kind: Session
+  ancestor: no
+  properties:
+  - name: "cdt"
+    direction: desc
+  - name: "udt"
+    direction: desc
+
+- kind: Session
+  ancestor: no
+  properties:
+  - name: "dflg"
+    direction: asc
+  - name: "udt"
+    direction: asc
+
+- kind: buttons
+  properties:
+  - name: dflg
+  - name: draft
+  - name: udt
+    direction: desc
+
+- kind: buttons
+  properties:
+  - name: dflg
+  - name: udt
+    direction: desc
+
+- kind: rbfaq
+  properties:
+  - name: dflg
+  - name: draft
+  - name: udt
+    direction: desc
+
+- kind: rbfaq
+  properties:
+  - name: dflg
+  - name: udt
+    direction: desc
+
+- kind: Histories
+  ancestor: no
+  properties:
+  - name: "server_code"
+    direction: asc
+  - name: "cdt"
+    direction: desc
+
+- kind: Histories
+  properties:
+  - name: commitid
+  - name: cdt
+    direction: desc
+
+- kind: Histories
+  properties:
+  - name: appli_name
+  - name: cdt
+    direction: desc
+
+- kind: custom_css
+  properties:
+  - name: dflg
+  - name: udt
+    direction: desc
